@@ -1,1 +1,21 @@
-<h1>{{ title }}</h1>
+{% extends "layout.html" %}
+{% block body_content %}
+	<h1>{{ title }}</h1>
+	<p>
+	This is the complete movie list</br>
+	in your collection<br>
+        -----------------------------------------
+	</p>
+	{% if posts %}
+		{% for post in posts %}
+			<div>
+				<h3>Movie title:  {{ post.title }} </h3>
+				<span> released: {{ post.release_year }} <br>
+					catalogue id: {{ post.movie_id }} <br>
+				-----------------------------------------
+				</span>
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endblock %}
+
