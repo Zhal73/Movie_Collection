@@ -6,7 +6,10 @@
 <body>
 <h1>{{  title  }} Page</h1>
 {% if title != 'Movie Collection Home Page' %}
-	<a href="{{ url_for('home') }}"> Home Page </a>	
+	<a href="{{ url_for('home') }}"> Home Page </a>	&nbsp;&nbsp;&nbsp;&nbsp;
+{% endif %}
+{% if title != 'Add Movie' and title != 'Movie Collection Home Page' %}
+        <a href="{{ url_for('insert_movie') }}"> Inser a Movie </a>
 {% endif %}
 {% block body_content %}{% endblock %}
 </body>

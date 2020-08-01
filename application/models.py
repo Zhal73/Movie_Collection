@@ -20,6 +20,6 @@ class Actors(db.Model):
 #this table break the many to many relation
 #between movies and actors
 class Cast_details(db.Model):
-    cast_it = db.Column(db.Integer, primary_key=True)
+    cast_id = db.Column(db.Integer, primary_key=True)
     movie_id = db.Column(db.Integer,db.ForeignKey('movies.movie_id'), nullable=False)
     actor_id = db.Column(db.Integer,db.ForeignKey('actors.actor_id'), nullable=False)

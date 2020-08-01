@@ -3,7 +3,7 @@ from flask import render_template,redirect, url_for, request
 # import the app object from the ./application/__init__.py
 from application import app,db
 #imports the db tables models
-from application.models import Movies
+from application.models import Movies, Cast_details
 #import the form to inser a movie
 from application.forms import MovieForm, UpdateMovieForm
 
@@ -51,3 +51,22 @@ def update(movie_id):
         form.title.data = movie.title
         form.release_year.data = movie.release_year
     return render_template('update.html', title='Update Movie Details', form = form)
+
+#defines route for detele movie
+@app.route('/delete/<movie_id>', methods=['GET','POST'])
+def delete(movie_id):
+    movie = Movies.query.filter_by(movie_id = movie_id).first()
+
+    #this make sure that all the occurrency of movie_id in the cast details
+    #are going to be deleted from Cast_details table, because it has movie_id
+    #as foreign key that referes to movie_id in Movie.
+    #If we don't delete the cast details, it won't be possible to delete the movie
+    #because of the foreigh key costraint
+    cast_details_to_delete = Cast_details.query.filter_by(movie_id = movie.movie_id).all()
+    for cast_details in cast_details_to_delete:
+        db.session.delete(cast_details)
+    
+    #now is possible to delete the movie
+    db.session.delete(movie)
+    db.session.commit()
+    return redirect(url_for('all_movie'))
