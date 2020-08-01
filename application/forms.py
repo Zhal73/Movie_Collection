@@ -26,3 +26,21 @@ class MovieForm(FlaskForm):
             ]
         )
     submit = SubmitField('Add Movie')
+
+#form to update a movie:
+class UpdateMovieForm(FlaskForm):
+    title = StringField('Movie Title : ',
+            validators = [
+                DataRequired(),
+                Length(min=2, max=100)
+            ]
+        )
+
+    release_year = IntegerField('Release Year : ',
+            validators = [
+                NumberRange(
+                    min=1900,
+                    max=date.today().year)
+            ]
+        )
+    submit = SubmitField('Update')
