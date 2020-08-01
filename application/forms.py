@@ -2,11 +2,10 @@
 from flask_wtf import FlaskForm
 #import the necessary data type to use in the field
 from wtforms import StringField, IntegerField, DateField,SubmitField
-from wtforms.validators import NumberRange
 from datetime import date
 #import the necessary validator to make sure that
 #the data inserted is of the valid format
-from wtforms.validators import DataRequired, Length
+from wtforms.validators import DataRequired, Length, NumberRange
 #import the Movies class defined in model.py
 from application.models import Movies
 
