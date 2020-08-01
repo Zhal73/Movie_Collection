@@ -26,14 +26,14 @@ def insert_movie():
     if form.validate_on_submit():
         movieData = Movies(
                 title = form.title.data,
-                release = form.release.data.year
+                release_year = form.release_year.data
                 )
         db.session.add(movieData)
         db.session.commit()
 
-        return redirect(url_for('home'))
+        return redirect(url_for('all_movie'))
     else:
         print(form.errors)
 
-    return render_template('insert_movie.html', title='Insert Movie',form=form)
+    return render_template('insert_movie.html', title='Add Movie',form=form)
 

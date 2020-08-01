@@ -5,6 +5,9 @@
 </head>
 <body>
 <h1>{{  title  }} Page</h1>
+{% if title != 'Movie Collection Home Page' %}
+	<a href="{{ url_for('home') }}"> Home Page </a>	
+{% endif %}
 {% block body_content %}{% endblock %}
 </body>
 </html>

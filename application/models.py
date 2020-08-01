@@ -7,7 +7,7 @@ from sqlalchemy.dialects.mysql import YEAR
 class Movies(db.Model):
     movie_id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable = False)
-    release = db.Column(YEAR)
+    release_year = db.Column(YEAR)
 
 #creates the table actors into the database
 class Actors(db.Model):
