@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<p>
+<span> Here you can put the details 
+	<br>
+	of a new movie: 
+</span>
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            {{ form.title.label }}
+            {{ form.title }}
+	    <!-- Shows the errors in the title field -->
+	    {% if form.title.errors %}
+	    	<!-- div tag for later styling -->
+	    	<div class="error">
+			{% for error in form.title.errors %}
+				<span>{{ error }}</span>
+			{% endfor %}
+		</div>
+	    {% endif %}
+
+            <p>
+	    </p>
+            {{ form.release_year.label }}
+            {{ form.release_year }}
+	    <!-- Shows the errors in the release_year field -->
+            {% if form.release_year.errors %}
+                <!-- div tag for later styling -->
+                <div class="error">
+                        {% for error in form.release_year.errors %}
+                                <span>{{ error }}</span>
+			{% endfor %}
+                </div>
+	    {% endif %}
+	    <p>
+            {{ form.submit }}
+	    </p>
+        </form>
+    </div>
+</p>
+{% endblock %}
