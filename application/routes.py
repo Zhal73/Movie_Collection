@@ -65,7 +65,8 @@ def delete(movie_id):
     cast_details_to_delete = Cast_details.query.filter_by(movie_id = movie.movie_id).all()
     for cast_details in cast_details_to_delete:
         db.session.delete(cast_details)
-    
+        db.session.commit()
+
     #now is possible to delete the movie
     db.session.delete(movie)
     db.session.commit()
