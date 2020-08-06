@@ -1,0 +1,11 @@
+[Unit]
+Description=Movie Colection Service
+
+[Service]
+User=jenkins
+WorkingDirectory=/opt/movie-collection-app
+EnvironmentFile=/opt/movie-collection-app/flask.env
+ExecStart=/opt/movie-collection-app/venv/bin/gunicorn --workers=4 --bind=0.0.0.0:5000 application:app
+
+[Install]
+WantedBy=multi-user.target
