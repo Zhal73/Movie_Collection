@@ -8,6 +8,7 @@ class Movies(db.Model):
     movie_id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable = False)
     release_year = db.Column(YEAR)
+    movie_cast=db.relationship('Cast_details',backref='movie',lazy=True)
 
 #creates the table actors into the database
 class Actors(db.Model):
@@ -15,6 +16,7 @@ class Actors(db.Model):
     first_name = db.Column(db.String(50))
     last_name = db.Column(db.String(50), nullable=False)
     date_of_birth = db.Column(db.Date)
+    actor_cast=db.relationship('Cast_details',backref='actor',lazy=True)
 
 #creates the table cast_details into the database
 #this table break the many to many relation
