@@ -16,6 +16,8 @@ GitHub : https://github.com/Zhal73/Movie_Collection.git
 
 Jira board : https://domenico-gagliano.atlassian.net/jira/software/projects/MC/boards/7/backlog
 
+Risk assessment : https://drive.google.com/file/d/1fUjfWm3RGXYJ1oeUKSg4td9fJD6-fFHb/view?usp=sharing
+
 
 
 ##### Index
@@ -195,6 +197,8 @@ I also classified the Likelihood of the risks, their impact level and their tole
 - **Risk Tolerance**
   - Tolerate: No further action taken, because the risk's consequences are manageable.
   - Treat: Action taken to minimise the risk's consequences.
+  
+  The risk assessment can also be found at : https://drive.google.com/file/d/1fUjfWm3RGXYJ1oeUKSg4td9fJD6-fFHb/view?usp=sharing
 
 | Threat                                             | Description                                                  | Likelihood | Impact | Responsibility        | Current Mitigation                                           | Proposed Mitigation                                          | Response                                                     | Tolerance |
 | :------------------------------------------------- | ------------------------------------------------------------ | ---------- | ------ | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------- |
