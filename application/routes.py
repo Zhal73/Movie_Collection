@@ -11,7 +11,7 @@ from application.forms import MovieForm, UpdateMovieForm
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', title='Movie Collection Home Page')
+    return render_template('home.html', title='Movie Collection Home')
 
 #defines route for all_movie page
 @app.route('/all_movie')
