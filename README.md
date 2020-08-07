@@ -1,6 +1,6 @@
 # **<u>Movie Collection</u>** 
 
-### QA-SFIA Project 1
+#### QA-SFIA Project 1
 
 ------
 
@@ -18,7 +18,7 @@ Jira board : https://domenico-gagliano.atlassian.net/jira/software/projects/MC/b
 
 
 
-#### Index
+##### Index
 
 - [Project Brief](#project-brief)
 - [Requirements](#requirements)
@@ -35,11 +35,11 @@ Jira board : https://domenico-gagliano.atlassian.net/jira/software/projects/MC/b
 
 ------
 
-#### Project Brief
+###### Project Brief
 
 To create a CRUD application with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training.
 
-#### Requirements
+###### Requirements
 
 The basic requirement for the application are specified on the assessment text as follow:
 
@@ -52,7 +52,7 @@ The basic requirement for the application are specified on the assessment text a
 - Version Control
 - CI server
 
-#### General Approach
+###### General Approach
 
 For this project I decided to develop a small application capable to manage a movie collection, on which a user will be able (once the application is fully developed) to consult a list of movie, for each movie see its cast and manage a list of actors that participate to the movies.
 
@@ -114,7 +114,7 @@ Wont have:
 
 
 
-#### Entity Relationship Diagram
+###### Entity Relationship Diagram
 
 To store the information related to movies, actors and cast, the database I used required three tables, a Movies table, an Actors table and a Cast_details table. The latter being necessary to manage the many-to-many relation that occurs between the Movies and the Actors table which is not possible to represent by using the relational model. 
 
@@ -136,7 +136,7 @@ A movie must have at least one cast details and each cast detail must be in one 
 
 An actors can be in many cast details (can also no be present in any) and a cast detail has one and only one actor.
 
-#### CI Pipeline
+###### CI Pipeline
 
 The following is the continuous integration pipeline:
 
@@ -154,7 +154,7 @@ To automate the testing and deployment of the application, I used Jenkins which 
 
 The test environment consists in a pytest module installed into a Flask micro environment that runs in a Virtual Machine hosted by Google Cloud Platform. A similar structure is used for the live environment, where a Gunicorn production server has been implemented into the Flask microframework, which runs in the GCP virtual machine.
 
-#### Project Tracking
+###### Project Tracking
 
 To track the development cycle of this web application I used a Jira board which could is available at:
 
@@ -178,7 +178,7 @@ The following illustrated a typical sprint:
 
 In particular here the Sprint number four is illustrate, in here is possible to see which tasks where in the queue waiting to be addressed (TO DO), the tasks on which I was actually working (IN PROGRESS) and the tasks completed (DONE).
 
-#### Risk Assessment
+###### Risk Assessment
 
 Any project is subject to risks of various nature, and this project is not an exception, so I have analysed possible risks that can affect its successful completion. I have included risks of various nature in my analysis, such as those related to the use of   Cloud Services, those related to application being available on the internet and those related to the use of the application (eg. user's input).
 
@@ -207,7 +207,7 @@ I also classified the Likelihood of the risks, their impact level and their tole
 
 
 
-#### Front End
+###### Front End
 
 As mentioned before, the visual aspect of the application has not been developed at this stage, so the application looks very basic. It essentially consists in four html pages as described below: 
 
@@ -261,7 +261,7 @@ The same structure is reproduced for the page that update movies details:
 
 when the user clicks the link, the page retrieve the movie details from the database, and automatically fills the field in the form, so the user is able to see what information is stored on the database. Again validation is in place to make sure that the user insert appropriate details.
 
-#### Back End
+###### Back End
 
 the back end implementation uses the micro framework Flask, this allowed me to program the application in Python. As a micro framework, Flask can be extended with the use of modules that implement particular functionality I may need.
 
@@ -281,9 +281,11 @@ The application's structure is a typical Flask structure:
 
 
 
+
+
 Here I  have the apllication nested into the application directory, inside of which is possible to find the python files to manage forms (forms.py), database models (models.py) and routes (routes.py). Inside the application directory I have the template directory which contains the html pages. These pages are called inside the routes.py functions defined with @app.route, this functions uses the render_template library to return the appropriate html page.
 
-#### Testing
+###### Testing
 
 The application tests have been done by using the Python modules pytest.
 
@@ -318,7 +320,9 @@ The following image shows the a part of the Jenkins console output after the tes
 
 
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\final_cov.JPG)
+![](https://drive.google.com/uc?export=view&id=1fhGZF8ibreA1RnbsainrEtgLI9H3SG9D)
+
+
 
 --- Integration Testing ---
 
@@ -340,7 +344,7 @@ The following is a an example of the tests I wrote, in particular this test chec
             self.driver.find_element_by_xpath('//*[@id="submit"]').click()
             # Assert that browser redirects to all_movie page
             assert url_for('all_movie') in self.driver.current_url
-    
+
 Here is possible to see that the webdriver performs the following actions: 
 
 1.  From the home page it clicks the link to the add a movie page 
@@ -348,12 +352,12 @@ Here is possible to see that the webdriver performs the following actions:
 3. it submit the form
 4. then the test checks if it is redirected to the full list of movies.
 
-#### Future Improvements
+###### Future Improvements
 
 The application is indeed in a very initial state, so further improvement could consist in adding functionality to manage the list of Actors, manage the Cast for each movie and perform some search functionality such as search for a specific movie tile, or actor, other than improve the graphical aspect of the application.
 
 
 
-#### Author
+###### Author
 
 Domenico Gagliano
