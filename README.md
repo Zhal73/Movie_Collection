@@ -124,7 +124,7 @@ The entity relationship diagram for the database is the following:
 
 
 
-![](https://drive.google.com/file/d/1CK7xtaftDqAEhl0NmUnhhgq0jnf9Pj0k/view?usp=sharing)
+![](https://drive.google.com/uc?export=view&id=1CK7xtaftDqAEhl0NmUnhhgq0jnf9Pj0k)
 
 
 
@@ -140,9 +140,9 @@ An actors can be in many cast details (can also no be present in any) and a cast
 
 The following is the continuous integration pipeline:
 
+![](https://drive.google.com/uc?export=view&id=1Ror7APtmKCGE_B1UaAH_p1gYNI2AIrdb)
 
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\CIPipeline.jpg)
 
 This highlight the tools used to test and deploy the application.
 
@@ -162,7 +162,7 @@ To track the development cycle of this web application I used a Jira board which
 
 Initially, I created a number of users stories from the project requirements requirements, then I was able to break each user story in small task that I have completed. 
 
-![story](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\story.JPG)
+![](https://drive.google.com/uc?export=view&id=1td6Lne55V41aXwdUhcS4NQAeskPIvqlC)
 
 The previous image all the user's stories I constructed for the application. As is possible to note, each story has an associated value (story points) which indicates the estimate complexity of the story, so an higher value indicates a more complex feature to implement. As a base case for my estimation I used the story I thought was the simplest to implement, in this case the story "MC-10 Users can consult the entire movie collection", this because can be translated in a simple query.
 
@@ -170,7 +170,9 @@ Then I organised my job using Sprints, each of which normally last one week and 
 
 The following illustrated a typical sprint:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\Sprint4.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1hfkm833Y2rxyTXvza5Ii8b5Ta5q_1T_I)
 
 
 
@@ -211,23 +213,35 @@ As mentioned before, the visual aspect of the application has not been developed
 
 The home page is:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\home.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1WGT6M67cNB5ZU_jcPlfwKE8homG-2n_M)
 
 It consists in a welcome message, a link to a page that read the entire content of the movie table, and a link to a page tat allows the user to add an new movie to the collection.
 
 The page that shows the movie list is:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\all.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=14-GUqpsugDdjwX1W4TpBKyHDrQfUPx64)
+
+
 
 In here the user, other than see the entire list of movies, is presented with two further links for each movie to update the details of the movie or to delete it from the list.
 
 The page to add a movie to the list is:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\add.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1KObfG7KbTAYbcUcyi6VRAfZW_CuPRBaz)
 
 In here the user is able to put the details of the new movie to be added.
 
 The data insert in each field is validate before it is submitted, in particular the movie title has to be between 2 and 100 characters long, and the release year has to be from 1900 to the current year, so it is not possible to add "future" movie.
+
+
+
+![](https://drive.google.com/uc?export=view&id=1rUDSnpM2s6vh0iRt3tPYgWBgPjiI4plX)
 
 The piece of code that checks the year validity is:
 
@@ -241,7 +255,9 @@ The piece of code that checks the year validity is:
 
 The same structure is reproduced for the page that update movies details:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\update.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1XXwfGiTucUC_fSVy2cfhznsNZMNAO_RM)
 
 when the user clicks the link, the page retrieve the movie details from the database, and automatically fills the field in the form, so the user is able to see what information is stored on the database. Again validation is in place to make sure that the user insert appropriate details.
 
@@ -259,7 +275,11 @@ Inside the virtual environment I installed the necessary modules, in particular 
 
 The application's structure is a typical Flask structure:
 
- ![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\strucure.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1FkvJcLbaYn2eXCUwrW2trjmkkXcWL9vw)
+
+
 
 Here I  have the apllication nested into the application directory, inside of which is possible to find the python files to manage forms (forms.py), database models (models.py) and routes (routes.py). Inside the application directory I have the template directory which contains the html pages. These pages are called inside the routes.py functions defined with @app.route, this functions uses the render_template library to return the appropriate html page.
 
@@ -271,7 +291,11 @@ The application tests have been done by using the Python modules pytest.
 
 Before the implementation of any test, I had a situation similar to this:
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\ini_cov.JPG)
+
+
+![](https://drive.google.com/uc?export=view&id=1Ru2oQekRWCH6PKOmmukiLQBsLaa8ZJao)
+
+
 
 so I needed to implement unit tests to increase the coverage of the feel routes.py. 
 
@@ -326,7 +350,9 @@ Here is possible to see that the webdriver performs the following actions:
 
 ###### Future Improvements
 
-The application is indeed in a very initial state, so further improvement could consist in adding functionality to manage the list of Actors, manage the Cast for each movie and perform some search functionality such as search for a specific movie tile, or actor.
+The application is indeed in a very initial state, so further improvement could consist in adding functionality to manage the list of Actors, manage the Cast for each movie and perform some search functionality such as search for a specific movie tile, or actor, other than improve the graphical aspect of the application.
+
+
 
 ###### Author
 
