@@ -124,7 +124,7 @@ The entity relationship diagram for the database is the following:
 
 
 
-![](C:\Users\Domenico (Uni)\Desktop\QA Academy\Project1\Doc\Entity_Relation_Diagram.jpg)
+![](https://drive.google.com/file/d/1CK7xtaftDqAEhl0NmUnhhgq0jnf9Pj0k/view?usp=sharing)
 
 
 
