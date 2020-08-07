@@ -60,7 +60,6 @@ class TestBase(TestCase):
 
 ##### TESTS IMPLEMENTATION  ########
 class TestMovieApp(TestBase):
-    pass
     # checks if the home page is accessible
     # routes.py line 14
     def test_homepage(self):
