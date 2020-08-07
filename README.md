@@ -245,13 +245,11 @@ The data insert in each field is validate before it is submitted, in particular 
 
 The piece of code that checks the year validity is:
 
-*release*_year = IntegerField('Release Year : ',*
-            *validators = [*
-                *NumberRange(*
-                    *min=1900,*
-                    *max=date.today().year)*
-            *]*
-        )*
+
+
+![](https://drive.google.com/uc?export=view&id=1ufBO7p-9blWctDIf-r2QxIRjZ8SxN9mc)
+
+
 
 The same structure is reproduced for the page that update movies details:
 
