@@ -356,7 +356,7 @@ Here is possible to see that the webdriver performs the following actions:
 
 ### Future Improvements
 
-The application is indeed in a very initial state, so further improvement could consist in adding functionality to manage the list of Actors, manage the Cast for each movie and perform some search functionality such as search for a specific movie tile, or actor, other than improve the graphical aspect of the application.
+The application is indeed in a very initial state, so further improvement could consist in adding functionality to manage the list of Actors, manage the Cast for each movie and perform some search functionality such as search for a specific movie tile, or actor, other than improve the graphical aspect of the application
 
 
 
